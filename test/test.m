@@ -1,4 +1,15 @@
+@implementation MachoFile
+{
+    NSFileHandle *_fileHandle;
+}
 
-    NSString *a = @"abc";
-    [a bce];
-    [a def:c];
+- (instancetype)initWithPath:(NSString *)file {
+    self = [super init];
+    if (self) {
+        self.machoFile = file;
+    }
+    return self;
+}
+
+
+@end
