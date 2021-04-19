@@ -66,7 +66,8 @@ class JscpdReport:
             file["clones"] = file["clones"] + 1
             file["duplicatedLines"] = file["duplicatedLines"] + func.lineCount
 
-            self.statistics["total"]["clones"] = self.statistics["total"]["clones"] + 1
+            self.statistics["formats"]["objectivec"]["total"]["clones"] = self.statistics["formats"]["objectivec"]["total"]["clones"] + 1
+            self.statistics["formats"]["objectivec"]["total"]["duplicatedLines"] = self.statistics["formats"]["objectivec"]["total"]["duplicatedLines"] + func.lineCount
 
         else:
             lines = self.fileLines(func)
@@ -74,13 +75,17 @@ class JscpdReport:
                         clones=1,
                         sources=1,
                         duplicatedLines=func.lineCount)
-            self.statistics["total"]["lines"] = self.statistics["total"]["lines"] + lines
-            self.statistics["total"]["clones"] = self.statistics["total"]["clones"] + 1
+            self.statistics["formats"]["objectivec"]["total"]["lines"] = self.statistics["formats"]["objectivec"]["total"]["lines"] + lines
+            self.statistics["formats"]["objectivec"]["total"]["clones"] = self.statistics["formats"]["objectivec"]["total"]["clones"] + 1
+            self.statistics["formats"]["objectivec"]["total"]["sources"] = self.statistics["formats"]["objectivec"]["total"]["sources"] + 1
+
             self.statistics["formats"]["objectivec"]["sources"][key] = file
 
+        self.statistics["formats"]["objectivec"]["total"]["duplicatedLines"] = self.statistics["formats"]["objectivec"]["total"]["duplicatedLines"] + func.lineCount
         file["percentage"] = file["duplicatedLines"] * 100 /  file["lines"]
-        self.statistics["total"]["percentage"] = self.statistics["total"]["duplicatedLines"] * 100 /  self.statistics["total"]["lines"]
+        self.statistics["formats"]["objectivec"]["total"]["percentage"] = round(self.statistics["formats"]["objectivec"]["total"]["duplicatedLines"] * 100 /  self.statistics["formats"]["objectivec"]["total"]["lines"], 2)
 
+        self.statistics["total"] = self.statistics["formats"]["objectivec"]["total"]
 
     def fileLines(self, func):
         file = open(func.path, 'r')
