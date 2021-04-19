@@ -5,7 +5,7 @@ import sys
 import os
 from antlr4 import *
 from grammar import *
-from funchash import FuncHash
+from FuncHash import FuncHash
 
 class OCCodeListener(ObjectiveCParserListener):
 
@@ -16,12 +16,12 @@ class OCCodeListener(ObjectiveCParserListener):
     def enterInstanceMethodDefinition(self, ctx):
         self.addList(ctx)
 
-    def enterCategoryImplementation(self, ctx):
+    def enterClassMethodDeclaration(self, ctx):
         self.addList(ctx)
 
 
     def addList(self, ctx):
-        self.fileHash.addMethodSource(ctx.start.start, ctx.stop.stop)
+        self.fileHash.addMethodSource(ctx.start, ctx.stop)
         pass
 
 class FileHash:
@@ -42,12 +42,20 @@ class FileHash:
         walker.walk(listener, tree)
 
 
-    def addMethodSource(self, start, stop):
-        source = self.fileStream.getText(start, stop)
+    def addMethodSource(self, start: Token, stop: Token):
+        source = self.fileStream.getText(start.start, stop.stop)
 
         func = FuncHash(dict(path=self.path,
-                                start=start,
-                                stop=stop,
+                                start=start.start,
+                                startLoc={
+                                    "line": start.line,
+                                    "column": start.column
+                                },
+                                stop=stop.stop,
+                                stopLoc={
+                                    "line": stop.line,
+                                    "column": stop.column
+                                },
                                 source=source))
 
         self.funcList.append(func)

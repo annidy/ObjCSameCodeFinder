@@ -2,12 +2,6 @@
 import re
 from simhash import Simhash, SimhashIndex
 
-def get_features(s):
-    width = 3
-    s = s.lower()
-    s = re.sub(r'[^\w]+', '', s)
-    return [s[i:i + width] for i in range(max(len(s) - width + 1, 1))]
-
 class FuncHash:
 
     def __init__(self, dict):
@@ -16,10 +10,12 @@ class FuncHash:
         self.start = dict.get("start")
         self.stop = dict.get("stop")
         self.source = dict.get("source")
+        self.startLoc = dict.get("startLoc")
+        self.stopLoc = dict.get("stopLoc")
         self.lineCount = len(self.source.split('\n'))
 
     def hashSource(self):
-        self.simHash = Simhash(get_features(self.source))
+        self.simHash = Simhash(self.source)
 
     def distance(self, to):
         return self.simHash.distance(to.simHash)

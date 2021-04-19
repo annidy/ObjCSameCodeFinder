@@ -36,23 +36,29 @@ class JscpdReport:
         firstFile = dict(
             name=self.basename(func1.path),
             start=func1.start,
-            end=func1.stop
+            end=func1.stop,
+            startLoc=func1.startLoc,
+            endLoc=func1.stopLoc
         )
 
         secondFile = dict(
             name=self.basename(func2.path),
             start=func2.start,
-            end=func2.stop
+            end=func2.stop,
+            startLoc=func2.startLoc,
+            endLoc=func2.stopLoc
         )
 
         self.duplicates.append(dict(
             format="objectivec",
             lines=func1.lineCount,
-            fragment=difflib.HtmlDiff().make_table(func1.source, func2.source),
+            fragment=difflib.HtmlDiff().make_table(func1.source.splitlines(), func2.source.splitlines()).strip(),
             tokens=0,
             firstFile=firstFile,
             secondFile=secondFile
         ))
+
+        #print(difflib.HtmlDiff().make_file(func1.source.splitlines(), func2.source.splitlines()), file=open("test.html", "w+"))
 
         self.addStatistics(func1)
         self.addStatistics(func2)

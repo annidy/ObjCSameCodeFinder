@@ -17,7 +17,7 @@
 - (instancetype)initWithPath:(NSString *)file {
     self = [super init];
     if (self) {
-        self.machoFile = file;
+        self.machoFile = file2;
     }
     return self;
 }
