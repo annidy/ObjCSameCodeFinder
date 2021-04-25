@@ -14,12 +14,12 @@ from distutils.dir_util import copy_tree
 gb_detail  = 0
 gb_max_dis = 5 
 gb_min_linecount = 10
-gb_output = "out.json"
+gb_output = "."
 gb_ignore_partten = ["Tests"]
 
 
 def main(argv):
-    global gb_output
+    global gb_output, gb_min_linecount, gb_max_dis
     root_path= argv[1]
 
     for arg in argv:
@@ -54,8 +54,7 @@ def main(argv):
     print("Sorting all the ranked results...")
     sorted_arr = sorted(ranked_arr, key=cmp_to_key(lambda x,y:x[2]-y[2]))
 
-    output_file = open(gb_output, 'w+')
-    print(json.dumps(sorted_arr, indent=4), file=output_file)
+    print(json.dumps(sorted_arr, indent=4))
 
     # return
 
@@ -64,7 +63,9 @@ def main(argv):
         (func1, func2, _) = func
         jscpd.addDuplicate(func1, func2)
 
-    report(root_path, json.dumps(jscpd))
+    report(gb_output, json.dumps(jscpd))
+
+    # print(json.dumps(jscpd, indent=2), file=open("./reportor/mockups/public/jscpd-report.json", "w"))
 
     print("Finishd")
 
@@ -139,10 +140,10 @@ def file_name(file_path):
 
 #############################################
 ############### HTML Report ##############
-def report(root_path, json_data):
+def report(output, json_data):
     dirname = os.path.dirname(__file__) or '.'
     mock = os.path.join(dirname, "reportor/mockups/dist")
-    dist = os.path.join(root_path, "html")
+    dist = os.path.join(output, "html")
     if not os.path.exists(dist):
         os.mkdir(dist)
     copy_tree(mock, dist)
@@ -168,7 +169,7 @@ def print_help():
     print("\t--min-linecount=[input] - for function scan, the function would be ignore if the total line count of the function less than min-linecount")
     print("\t--detail    - Show the detail of process\n")
     print("\t--ignore-partten=[Tests,...]    - File or directory containts ignore\n")
-    print("\t--output=[intput] - Customize the output file, default is \"out.json\"")
+    print("\t--output=[intput] - Customize the output folder")
 
 if __name__ == '__main__':
     main(sys.argv)

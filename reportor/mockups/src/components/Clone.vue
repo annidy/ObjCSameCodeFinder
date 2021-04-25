@@ -6,16 +6,16 @@
         <p class="mt-2 text-gray-800 text-left">
           {{ clone.firstFile.name }}
           <span
-            class="text-gray-600">({{ clone.firstFile.startLoc.line }}:{{
-              clone.firstFile.startLoc.column
-            }}-{{ clone.firstFile.endLoc.line }}:{{ clone.firstFile.endLoc.column }})</span>
+            class="text-gray-600">{{ clone.firstFile.blame.author }} {{ clone.firstFile.blame.date }}</span>
+          <span
+            class="text-gray-600"> line: {{ clone.firstFile.startLoc.line }}-{{ clone.firstFile.endLoc.line }}</span>        
         </p>
         <p class="mt-2 text-gray-800 text-left">
           {{ clone.secondFile.name }}
+           <span
+            class="text-gray-600">{{ clone.secondFile.blame.author }} {{ clone.secondFile.blame.date }}</span>
           <span
-            class="text-gray-600">({{ clone.secondFile.startLoc.line }}:{{
-              clone.secondFile.startLoc.column
-            }}-{{ clone.secondFile.endLoc.line }}:{{ clone.secondFile.endLoc.column }})</span>
+            class="text-gray-600"> line: {{ clone.secondFile.startLoc.line }}-{{ clone.secondFile.endLoc.line }}</span>        
         </p>
       </div>
     </div>

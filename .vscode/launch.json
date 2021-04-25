@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/SameCodeFinder.py",
             "console": "integratedTerminal",
-            "args": ["./test"]
+            "args": ["./test","--min-linecount=3","--max-distance=15"]
         }
     ]
 }

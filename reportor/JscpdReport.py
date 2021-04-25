@@ -38,7 +38,8 @@ class JscpdReport:
             start=func1.start,
             end=func1.stop,
             startLoc=func1.startLoc,
-            endLoc=func1.stopLoc
+            endLoc=func1.stopLoc,
+            blame=func1.blame
         )
 
         secondFile = dict(
@@ -46,7 +47,8 @@ class JscpdReport:
             start=func2.start,
             end=func2.stop,
             startLoc=func2.startLoc,
-            endLoc=func2.stopLoc
+            endLoc=func2.stopLoc,
+            blame=func2.blame
         )
 
         self.duplicates.append(dict(

@@ -12,6 +12,7 @@ class FuncHash:
         self.source = dict.get("source")
         self.startLoc = dict.get("startLoc")
         self.stopLoc = dict.get("stopLoc")
+        self.blame = dict.get("blame")
         self.lineCount = len(self.source.split('\n'))
 
     def hashSource(self):

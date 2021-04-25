@@ -6,6 +6,7 @@ import os
 from antlr4 import *
 from grammar import *
 from FuncHash import FuncHash
+from Blamer import Blamer
 
 class OCCodeListener(ObjectiveCParserListener):
 
@@ -27,6 +28,7 @@ class OCCodeListener(ObjectiveCParserListener):
 class FileHash:
 
     def __init__(self, path):
+        self.blamer = Blamer(path)
         self.funcList = []
         self.path = path
         self.fileStream = FileStream(path, "utf8")
@@ -56,7 +58,8 @@ class FileHash:
                                     "line": stop.line,
                                     "column": stop.column
                                 },
-                                source=source))
+                                source=source,
+                                blame=self.blamer.getBlame(start.line)))
 
         self.funcList.append(func)
 
