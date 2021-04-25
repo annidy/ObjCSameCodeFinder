@@ -6,10 +6,10 @@
         <div class="w-full md:w-4/12 px-4">
           <div class="text-sm text-gray-600 font-semibold py-1">
             The report generated with <a
-            href="https://github.com/kucherenko/jscpd"
+            href="https://github.com/annidy/ObjCSameCodeFinder"
             class="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1"
           >
-            jscpd
+            SameCodeFinder
           </a>
           </div>
         </div>
@@ -17,15 +17,15 @@
           <ul class="flex flex-wrap list-none md:justify-end  justify-center">
             <li>
               <a
-                href="https://github.com/kucherenko/jscpd"
+                href="https://github.com/annidy/ObjCSameCodeFinder"
                 class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
               >
-                jscpd - copy/paste detector
+                SameCodeFinder - copy/paste detector
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/kucherenko/jscpd/blob/master/LICENSE"
+                href="https://github.com/annidy/ObjCSameCodeFinder/blob/master/LICENSE"
                 class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
               >
                 MIT License
