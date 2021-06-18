@@ -13,7 +13,7 @@ from distutils.dir_util import copy_tree
 
 gb_detail  = 0
 gb_max_dis = 5 
-gb_min_linecount = 10
+gb_min_linecount = 15
 gb_output = "."
 gb_ignore_partten = ["Tests"]
 

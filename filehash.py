@@ -3,6 +3,7 @@
 
 import sys
 import os
+import re
 from antlr4 import *
 from grammar import *
 from FuncHash import FuncHash
@@ -46,7 +47,9 @@ class FileHash:
 
     def addMethodSource(self, start: Token, stop: Token):
         source = self.fileStream.getText(start.start, stop.stop)
-
+        if self.hasCopyTag(source):
+            print("copy tag: " + source)
+            return
         func = FuncHash(dict(path=self.path,
                                 start=start.start,
                                 startLoc={
@@ -64,3 +67,11 @@ class FileHash:
         self.funcList.append(func)
 
         pass
+
+    def hasCopyTag(self, source):
+        for line in source.split('\n'):
+            line = line.strip()
+            if line.startswith("//"):
+                if re.match(r"//.*COPY", line):
+                    return True
+        return False
