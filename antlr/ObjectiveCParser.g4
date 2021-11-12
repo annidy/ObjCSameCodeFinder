@@ -61,13 +61,13 @@ includeDeclaration
 classInterface
     : IB_DESIGNABLE?
       '@interface'
-       className=genericTypeSpecifier (':' superclassName=identifier)? (LT protocolList GT)? instanceVariables? interfaceDeclarationList?
+       className=genericTypeSpecifier (':' superclassName=identifier)? (ILT protocolList GT)? instanceVariables? interfaceDeclarationList?
       '@end'
     ;
 
 categoryInterface
     : '@interface'
-       categoryName=genericTypeSpecifier LP className=identifier? RP (LT protocolList GT)? instanceVariables? interfaceDeclarationList?
+       categoryName=genericTypeSpecifier LP className=identifier? RP (ILT protocolList GT)? instanceVariables? interfaceDeclarationList?
       '@end'
     ;
 
@@ -84,7 +84,7 @@ categoryImplementation
     ;
 
 genericTypeSpecifier
-    : identifier ((LT protocolList GT) | genericsSpecifier)?
+    : identifier ((ILT protocolList GT) | genericsSpecifier)?
     ;
 
 protocolDeclaration
@@ -137,7 +137,7 @@ propertyAttribute
 
 protocolName
     : LT protocolList GT
-    | ('__covariant' | '__contravariant')?  identifier
+    | ('__covariant' | '__contravariant')?  identifier pointer?
     ;
 
 instanceVariables
@@ -300,6 +300,11 @@ selectorName
     | (selector? ':')+
     ;
 
+bdpSelectorName
+    : selector
+    | (selector ':' selector) +
+    ;
+
 protocolExpression
     : '@protocol' LP protocolName RP
     ;
@@ -319,6 +324,10 @@ throwStatement
 
 tryBlock
     : '@try' tryStatement=compoundStatement catchStatement* ('@finally' finallyStatement=compoundStatement)?
+    ;
+
+bdpSafeCallMessage
+    : BDP_SAFECALL_MESSAGE LP identifier ',' selectorExpression ',' bdpSelectorName RP
     ;
 
 catchStatement
@@ -617,6 +626,7 @@ statement
     | throwStatement ';'?
     | tryBlock ';'?
     | expressions ';'?
+    | bdpSafeCallMessage ';'?
     | ';'
     ;
 

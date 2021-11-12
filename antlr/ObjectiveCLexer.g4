@@ -120,6 +120,8 @@ ATOMIC:                   'atomic';
 NONATOMIC:                'nonatomic';
 RETAIN:                   'retain';
 
+BDP_SAFECALL_MESSAGE:     'BDP_SAFECALL_MESSAGE';
+
 // Attributes with `__` prefix
 
 ATTRIBUTE:                '__attribute__';
@@ -201,6 +203,7 @@ AT:                       '@';
 
 ASSIGNMENT:               '=';
 GT:                       '>';
+ILT:                       [ ]+'<';
 LT:                       '<';
 BANG:                     '!';
 TILDE:                    '~';
