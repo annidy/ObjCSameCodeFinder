@@ -1,4 +1,4 @@
-# Generated from ObjectiveCParser.g4 by ANTLR 4.8
+# Generated from ObjectiveCParser.g4 by ANTLR 4.9.3
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -1483,7 +1483,7 @@ class ObjectiveCParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.8")
+        self.checkVersion("4.9.3")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -1491,6 +1491,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TranslationUnitContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1549,6 +1550,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TopLevelDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1717,6 +1719,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ImportDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1768,6 +1771,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class IncludeDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1814,6 +1818,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ClassInterfaceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1942,6 +1947,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class CategoryInterfaceContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2064,6 +2070,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ClassImplementationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2159,6 +2166,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class CategoryImplementationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2241,6 +2249,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class GenericTypeSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2312,6 +2321,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2403,6 +2413,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolDeclarationSectionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2497,6 +2508,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolDeclarationListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2548,6 +2560,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ClassDeclarationListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2621,6 +2634,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2684,6 +2698,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PropertyDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2776,6 +2791,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PropertyAttributesListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2839,6 +2855,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PropertyAttributeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3021,6 +3038,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3109,6 +3127,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InstanceVariablesContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3172,6 +3191,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class VisibilitySectionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3256,6 +3276,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AccessModifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3311,6 +3332,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InterfaceDeclarationListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3422,6 +3444,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ClassMethodDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3468,6 +3491,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InstanceMethodDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3514,6 +3538,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MethodDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3585,6 +3610,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ImplementationDefinitionListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3695,6 +3721,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ClassMethodDefinitionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3741,6 +3768,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InstanceMethodDefinitionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3787,6 +3815,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MethodDefinitionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3870,6 +3899,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MethodSelectorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3960,6 +3990,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class KeywordDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4048,6 +4079,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SelectorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4105,6 +4137,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MethodTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4156,6 +4189,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PropertyImplementationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4227,6 +4261,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PropertySynthesizeListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4290,6 +4325,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PropertySynthesizeItemContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4348,6 +4384,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class BlockTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4455,6 +4492,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class GenericsSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4534,6 +4572,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeSpecifierWithPrefixesContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4593,6 +4632,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DictionaryExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4686,6 +4726,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DictionaryPairContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4738,6 +4779,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ArrayExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4812,6 +4854,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class BoxExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4903,6 +4946,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class BlockParametersContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4997,6 +5041,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeVariableDeclaratorOrNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5055,6 +5100,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class BlockExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5138,6 +5184,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MessageExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5195,6 +5242,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ReceiverContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5253,6 +5301,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MessageSelectorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5325,6 +5374,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class KeywordArgumentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5405,6 +5455,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class KeywordArgumentTypeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5481,6 +5532,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SelectorExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5537,6 +5589,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SelectorNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5619,6 +5672,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5675,6 +5729,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class EncodeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5731,6 +5786,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeVariableDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5778,6 +5834,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ThrowStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5853,6 +5910,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TryBlockContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5935,6 +5993,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class CatchStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5997,6 +6056,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SynchronizedStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6059,6 +6119,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AutoreleaseStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6105,6 +6166,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FunctionDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6151,6 +6213,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FunctionDefinitionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6198,6 +6261,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FunctionSignatureContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6287,6 +6351,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6341,6 +6406,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6398,6 +6464,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeParametersContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6456,6 +6523,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeParameterListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6519,6 +6587,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeParameterContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6597,6 +6666,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeParameterAssignmentContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6672,6 +6742,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6750,6 +6821,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FunctionCallExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6836,6 +6908,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class EnumDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6918,6 +6991,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class VarDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6982,6 +7056,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypedefDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7064,6 +7139,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeDeclaratorListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7127,6 +7203,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7181,6 +7258,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DeclarationSpecifiersContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7328,6 +7406,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AttributeSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7416,6 +7495,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InitDeclaratorListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7479,6 +7559,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InitDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7538,6 +7619,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class StructOrUnionSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7640,6 +7722,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FieldDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7705,6 +7788,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SpecifierQualifierListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7828,6 +7912,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class IbOutletQualifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7900,6 +7985,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ArcBehaviourSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7955,6 +8041,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class NullabilitySpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8010,6 +8097,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class StorageClassSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8065,6 +8153,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypePrefixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8129,6 +8218,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeQualifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8202,6 +8292,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ProtocolQualifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8263,6 +8354,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8444,6 +8536,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeofExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8501,6 +8594,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FieldDeclaratorListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8564,6 +8658,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class FieldDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8636,6 +8731,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class EnumSpecifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8798,6 +8894,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class EnumeratorListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8870,6 +8967,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class EnumeratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8929,6 +9027,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class EnumeratorIdentifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8986,6 +9085,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DirectDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9117,6 +9217,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DeclaratorSuffixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9175,6 +9276,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ParameterListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9233,6 +9335,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PointerContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9297,6 +9400,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class MacroContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9382,6 +9486,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ArrayInitializerContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9451,6 +9556,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class StructInitializerContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9549,6 +9655,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InitializerListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9621,6 +9728,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class TypeNameContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9692,6 +9800,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AbstractDeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9838,6 +9947,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AbstractDeclaratorSuffixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9929,6 +10039,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ParameterDeclarationListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9992,6 +10103,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ParameterDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10055,6 +10167,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DeclaratorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10109,6 +10222,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class StatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10336,6 +10450,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class LabeledStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10388,6 +10503,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class RangeExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10446,6 +10562,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class CompoundStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10528,6 +10645,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SelectionStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10625,6 +10743,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SwitchStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10687,6 +10806,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SwitchBlockContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10750,6 +10870,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SwitchSectionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10824,6 +10945,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class SwitchLabelContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10915,6 +11037,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class IterationStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10993,6 +11116,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class WhileStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11055,6 +11179,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class DoStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11127,6 +11252,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ForStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11230,6 +11356,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ForLoopInitializerContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11294,6 +11421,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ForInStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11374,6 +11502,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class JumpStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11464,6 +11593,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ExpressionsContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11527,6 +11657,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11895,6 +12026,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class AssignmentOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11971,6 +12103,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class CastExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12061,6 +12194,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class InitializerContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12129,6 +12263,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ConstantExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12187,6 +12322,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class UnaryExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12314,6 +12450,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class UnaryOperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12375,6 +12512,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PostfixExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12490,6 +12628,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PostfixContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12645,6 +12784,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ArgumentExpressionListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12708,6 +12848,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ArgumentExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12766,6 +12907,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class PrimaryExpressionContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -12934,6 +13076,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class ConstantContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13113,6 +13256,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class StringLiteralContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13204,6 +13348,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class IdentifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -13388,6 +13533,7 @@ class ObjectiveCParser ( Parser ):
 
 
     class IncludeTextContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
