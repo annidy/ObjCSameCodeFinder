@@ -4,27 +4,14 @@
 import sys
 import os
 import re
-from antlr4 import *
-from grammar import *
-from FuncHash import FuncHash
+import objctoken
 from Blamer import Blamer
+from FuncHash import FuncHash
+from enum import Enum, auto
 
-class OCCodeListener(ObjectiveCParserListener):
-
-    def __init__(self, fileHash):
-        super()
-        self.fileHash = fileHash
-
-    def enterInstanceMethodDefinition(self, ctx):
-        self.addList(ctx)
-
-    def enterClassMethodDeclaration(self, ctx):
-        self.addList(ctx)
-
-
-    def addList(self, ctx):
-        self.fileHash.addMethodSource(ctx.start, ctx.stop)
-        pass
+class FuncState(Enum):
+    TopLevel = 1
+    Implement = 2
 
 class FileHash:
 
@@ -32,37 +19,52 @@ class FileHash:
         self.blamer = Blamer(path)
         self.funcList = []
         self.path = path
-        self.fileStream = FileStream(path, "utf8")
+        self.fileObject = objctoken.FileObject(path)
 
-        lexer = ObjectiveCLexer(self.fileStream)
-        stream = CommonTokenStream(lexer)
-        parser = ObjectiveCParser(stream)
+        funcState = FuncState.TopLevel
+        funcToken = None
+        for line in self.fileObject:
+            if funcState == FuncState.TopLevel:
+                token = objctoken.ImplementToken(line)
+                if token.test():
+                    funcState = FuncState.Implement
+                    continue
 
-        tree = parser.translationUnit()
+            if funcState == FuncState.Implement:
+                if funcToken == None:
+                    token = objctoken.FuncImplToken(line)
+                    if token.test():
+                        funcToken = token
+                    else:
+                        token = objctoken.EndToken(line)
+                        if token.test():
+                           funcState = FuncState.TopLevel 
+                           continue
+                    
+                if funcToken != None:
+                    funcToken.append(line)
+                    if funcToken.balanceBracket(line):
+                        self.addMethodSource(funcToken)
+                        funcToken = None
 
-        listener = OCCodeListener(self)
-        walker = ParseTreeWalker()
-        walker.walk(listener, tree)
 
 
-    def addMethodSource(self, start: Token, stop: Token):
-        source = self.fileStream.getText(start.start, stop.stop)
-        if self.hasCopyTag(source):
-            print("copy tag: " + source)
-            return
+    def addMethodSource(self, funcToken):
+        source = funcToken.body
+        print("func:", funcToken.start.lineno, '-', funcToken.stop.lineno)
         func = FuncHash(dict(path=self.path,
-                                start=start.start,
+                                start=funcToken.start.lineno,
                                 startLoc={
-                                    "line": start.line,
-                                    "column": start.column
+                                    "line": funcToken.start.lineno,
+                                    "column": 0
                                 },
-                                stop=stop.stop,
+                                stop=funcToken.stop.lineno,
                                 stopLoc={
-                                    "line": stop.line,
-                                    "column": stop.column
+                                    "line": funcToken.stop.lineno,
+                                    "column": 0
                                 },
                                 source=source,
-                                blame=self.blamer.getBlame(start.line)))
+                                blame=self.blamer.getBlame(funcToken.start.lineno)))
 
         self.funcList.append(func)
 
