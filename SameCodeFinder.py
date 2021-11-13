@@ -162,9 +162,9 @@ def report(output, json_data):
 ############ Help ########################
 def print_help(): 
     print("Usage:\n")
-    print("\tpython SameFileFinder.py [arg0]\n")
+    print("\tpython SameFileFinder.py dir [options]\n")
     print("Args:\n")
-    print("\t[arg0] - Target Directory of files should be scan")
+    print("\tdir - Target Directory of files should be scan")
     print("\t--max-distance=[input] - max hamming distance to keep, default is 20")
     print("\t--min-linecount=[input] - for function scan, the function would be ignore if the total line count of the function less than min-linecount")
     print("\t--detail    - Show the detail of process\n")
