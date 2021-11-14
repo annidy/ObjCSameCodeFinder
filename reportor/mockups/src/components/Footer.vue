@@ -16,19 +16,14 @@
         <div class="w-full md:w-8/12 px-4">
           <ul class="flex flex-wrap list-none md:justify-end  justify-center">
             <li>
-              <a
-                href="https://github.com/annidy/ObjCSameCodeFinder"
-                class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
-              >
-                SameCodeFinder - copy/paste detector
-              </a>
+              creator
             </li>
             <li>
               <a
-                href="https://github.com/annidy/ObjCSameCodeFinder/blob/master/LICENSE"
+                href="mailto:fengxing2@bytedance.com"
                 class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
               >
-                MIT License
+                fengxing2
               </a>
             </li>
           </ul>
