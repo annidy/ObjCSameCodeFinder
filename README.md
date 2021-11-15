@@ -2,9 +2,7 @@
 
 环境准备
 ```
-pip install simhash
-pip install antlr4-python3-runtime
-pip install simplejson
+pip install -r requirement.txt
 ```
 
 使用方法

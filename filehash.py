@@ -4,7 +4,9 @@
 import sys
 import os
 import re
-import objctoken
+from objctoken.FileObject import FileObject, LineString
+from objctoken.FuncImplToken import FuncImplToken
+from objctoken.KeywordToken import ImplementToken, EndToken
 from Blamer import Blamer
 from FuncHash import FuncHash
 from enum import Enum, auto
@@ -19,24 +21,24 @@ class FileHash:
         self.blamer = Blamer(path)
         self.funcList = []
         self.path = path
-        self.fileObject = objctoken.FileObject(path)
+        self.fileObject = FileObject(path)
 
         funcState = FuncState.TopLevel
         funcToken = None
         for line in self.fileObject:
             if funcState == FuncState.TopLevel:
-                token = objctoken.ImplementToken(line)
+                token = ImplementToken(line)
                 if token.test():
                     funcState = FuncState.Implement
                     continue
 
             if funcState == FuncState.Implement:
                 if funcToken == None:
-                    token = objctoken.FuncImplToken(line)
+                    token = FuncImplToken(line)
                     if token.test():
                         funcToken = token
                     else:
-                        token = objctoken.EndToken(line)
+                        token = EndToken(line)
                         if token.test():
                            funcState = FuncState.TopLevel 
                            continue
