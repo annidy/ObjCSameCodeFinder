@@ -1,5 +1,5 @@
 #!/bin/zsh
-
+set -e
 
 
 # java -jar /usr/local/lib/antlr-4.8-complete.jar -no-listener -visitor -Dlanguage=Python3 *.g4 -o ../grammar
@@ -12,4 +12,4 @@ cd .antlr
 
 javac *.java
 
-java org.antlr.v4.gui.TestRig ObjectiveC translationUnit -gui '/Users/annidy/Work/bdp150/dist/project/TTMicroApp/Timor/Core/Common/BaseData/BDPCommonManager.m'
+java org.antlr.v4.gui.TestRig ObjectiveC translationUnit -gui '/Users/annidy/Work/bdp150/dist/project/TTMicroApp/Timor/Core/Common/Controller/Permission/BDPPermissionController.m'
