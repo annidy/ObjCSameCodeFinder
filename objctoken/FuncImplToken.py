@@ -1,4 +1,6 @@
 from .NonSpaceToken import NonSapceToken
+from .KeywordToken import CommentsToken
+
 
 class FuncImplToken(NonSapceToken):
     def __init__(self, line):
@@ -10,13 +12,19 @@ class FuncImplToken(NonSapceToken):
         self.lineCount = 0
 
     def test(self):
-        if (self.match('-') or self.match('+')):
+        if (self.startswith('-') or self.startswith('+')):
             self.forward()
             return True
         return False
 
     def balanceBracket(self, line):
+        # 过滤注释
+        token = CommentsToken(line)
+        if token.test():
+            return False
+
         for s in line:
+            # FIXME: 需要处理注释、字符串等特殊情况
             if s == '{':
                 self.isBalance = True
                 self.bracketCount = self.bracketCount + 1

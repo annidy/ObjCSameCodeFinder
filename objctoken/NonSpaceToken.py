@@ -1,30 +1,30 @@
 class NonSapceToken:
     def __init__(self, src):
         self.src = src
-        self.pos = 0
-        pass
+        self.pos = self.fpos = 0
     
-    def isSapce(self):
-        ch = self.src[self.pos]
+    def isSapce(self, pos):
+        ch = self.src[pos]
         if ch == ' ' or ch == '\n':
             return True
 
         return False
 
     def skipSpace(self):
-        while self.isSapce():
-            self.pos = self.pos + 1
-            if self.pos >= len(self.src):
-                self.pos = len(self.src) - 1
-                return None 
-            
-        return self.src[self.pos]
+        pos = self.pos
+        while pos < len(self.src) -1  and self.isSapce(pos):
+            pos = pos + 1
+        return pos
 
-    def match(self, src):
-        self.skipSpace()
-        if self.src[self.pos:].startswith(src):
-            self.fpos = self.pos + len(src)
+    def startswith(self, prefix, start=None):
+        """判断代码是以prefix开头"""
+        if start is None:
+            start = self.skipSpace()
+
+        if repr(self.src).startswith(prefix, start):
+            self.fpos = start + len(prefix)
             return True
+
         return False
 
     def forward(self):

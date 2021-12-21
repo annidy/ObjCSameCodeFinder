@@ -22,7 +22,7 @@
     return self;
 }
 
-- (void)setMachoFile:(NSString *)machoFile {
+   - (void)setMachoFile:(NSString *)machoFile {
     if (_machoFile != machoFile) {
         _machoFile = [machoFile copy];
         [self load];

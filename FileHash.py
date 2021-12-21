@@ -6,7 +6,7 @@ import os
 import re
 from objctoken.FileObject import FileObject, LineString
 from objctoken.FuncImplToken import FuncImplToken
-from objctoken.KeywordToken import ImplementToken, EndToken
+from objctoken.KeywordToken import ImplementToken, EndToken, CommentsToken
 from Blamer import Blamer
 from FuncHash import FuncHash
 from enum import Enum, auto
